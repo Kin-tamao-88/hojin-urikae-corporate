@@ -27,7 +27,7 @@
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.01em;
-    color: #0b2348;
+    color: #1e3a5f;
     white-space: nowrap;
     word-break: keep-all;
   }
@@ -45,13 +45,13 @@
     font-size: 78px;
     font-weight: 900;
     line-height: 0.95;
-    color: #c9a84c;
+    color: #9a7a3a;
   }
 
   .hero-heading-main .hero-main-de {
     font-size: 62px;
     font-weight: 900;
-    color: #0b2348;
+    color: #1e3a5f;
   }
 
   .hero-heading-close {
@@ -61,12 +61,12 @@
     font-size: 48px;
     font-weight: 800;
     line-height: 1;
-    color: #0b2348;
+    color: #1e3a5f;
     white-space: nowrap;
     word-break: keep-all;
   }
 
-  /* Hero 赤CTA：心拍のようなパルス（scale + box-shadow）。60秒バッジは子要素として一体で拡縮 */
+  /* Hero 赤CTA：心拍のようなパルス（scale のみ／box-shadow禁止）。60秒バッジは子要素として一体で拡縮 */
   .hero-cta-pulse {
     animation: heroCtaPulse 1.8s ease-in-out infinite;
     will-change: transform;
@@ -77,11 +77,9 @@
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 8px 20px rgba(192, 57, 43, 0.28);
   }
   50% {
     transform: scale(1.03);
-    box-shadow: 0 14px 34px rgba(192, 57, 43, 0.45);
   }
 }
 

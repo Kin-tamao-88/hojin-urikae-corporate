@@ -61,7 +61,7 @@ const saleBadges = ["無料価値診断", "現金化の可能性", "売却益の
 const dissolutionBadges = ["清算費用", "滞納税金", "価値消滅"]
 
 // 比較項目アイコンの円背景・画像サイズは左右で統一（カード間でズレないこと）
-const COMPARE_ICON_RING = "flex h-[80px] w-[80px] items-center justify-center rounded-full bg-white md:h-[104px] md:w-[104px]"
+const COMPARE_ICON_RING = "flex h-[80px] w-[80px] items-center justify-center rounded-lg bg-white md:h-[104px] md:w-[104px]"
 const COMPARE_ICON_IMG = "h-[60px] w-[60px] object-contain md:h-[82px] md:w-[82px]"
 
 function CompareItem({ data, tone }: { data: ItemData; tone: "neg" | "pos" }) {
@@ -73,13 +73,13 @@ function CompareItem({ data, tone }: { data: ItemData; tone: "neg" | "pos" }) {
           <span className={`${COMPARE_ICON_RING} border-2 border-ink-muted/25`}>
             <img src={data.img} alt="" aria-hidden className={COMPARE_ICON_IMG} />
           </span>
-          <span className="absolute -left-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-ink-muted text-white">
+          <span className="absolute -left-1 -top-1 flex h-7 w-7 items-center justify-center rounded-lg bg-ink-muted text-white">
             <XMark />
           </span>
         </div>
         <div>
-          <p className="text-[22px] font-bold leading-tight text-ink">{data.title}</p>
-          <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-ink-light">{data.desc}</p>
+          <p className="text-[22px] font-extrabold leading-tight text-ink">{data.title}</p>
+          <p className="mt-1.5 text-[14px] font-normal leading-relaxed text-ink-light">{data.desc}</p>
         </div>
       </li>
     )
@@ -87,16 +87,16 @@ function CompareItem({ data, tone }: { data: ItemData; tone: "neg" | "pos" }) {
   return (
     <li className="flex flex-1 items-center gap-5 py-6">
       <div className="relative shrink-0">
-        <span className={`${COMPARE_ICON_RING} border-2 border-gold/70 shadow-[0_5px_16px_rgba(168,132,47,0.22)]`}>
+        <span className={`${COMPARE_ICON_RING} border-2 border-gold/70`}>
           <img src={data.img} alt="" aria-hidden className={COMPARE_ICON_IMG} />
         </span>
-        <span className="absolute -left-1 -top-1 flex h-8 w-8 items-center justify-center rounded-full bg-gold text-white shadow">
+        <span className="absolute -left-1 -top-1 flex h-8 w-8 items-center justify-center rounded-lg bg-gold text-white ">
           <CheckMark />
         </span>
       </div>
       <div>
         <p className="text-[22px] font-extrabold leading-tight text-gold-dark">{data.title}</p>
-        <p className="mt-1.5 text-[15px] font-medium leading-relaxed text-navy">{data.desc}</p>
+        <p className="mt-1.5 text-[15px] font-normal leading-relaxed text-navy">{data.desc}</p>
       </div>
     </li>
   )
@@ -112,13 +112,13 @@ export function Comparison() {
         {/* ⑤ Hope の補強材料として機能させるため、比較表は約10%スリム化（max-w）して中央寄せ */}
         <div className="relative mx-auto grid w-full max-w-[1010px] grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-16">
           {/* 左：解散する場合（弱め・淡色） */}
-          <div className="flex flex-col overflow-hidden rounded-[20px] border border-navy/[0.08] bg-slate-bg/70">
-            <div className="bg-navy/75 py-4 text-center text-[18px] font-bold tracking-wide text-white/90">
+          <div className="flex flex-col overflow-hidden rounded-lg border border-navy/[0.08] bg-slate-bg/70">
+            <div className="bg-navy/75 py-4 text-center text-[18px] font-extrabold tracking-wide text-white/90">
               解散する場合
             </div>
             {/* 比較軸 */}
-            <div className="flex items-center justify-center gap-2 bg-ink/[0.04] py-2.5 text-[14px] font-bold text-ink-light">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-ink-muted text-white">
+            <div className="flex items-center justify-center gap-2 bg-ink/[0.04] py-2.5 text-[14px] font-extrabold text-ink-light">
+              <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-ink-muted text-white">
                 <XMark className="h-3 w-3" />
               </span>
               会社の価値を失う
@@ -128,7 +128,7 @@ export function Comparison() {
               {dissolutionBadges.map((b) => (
                 <span
                   key={b}
-                  className="inline-flex items-center gap-1 rounded-full border border-ink-muted/30 bg-white/70 px-3 py-1 text-[12.5px] font-bold text-ink-light"
+                  className="inline-flex items-center gap-1 rounded-lg border border-ink-muted/30 bg-white/70 px-3 py-1 text-[12.5px] font-extrabold text-ink-light"
                 >
                   <XMark className="h-3 w-3" />
                   {b}
@@ -144,13 +144,13 @@ export function Comparison() {
           </div>
 
           {/* 右：法人売却の場合（強調・高級感・浮き上げ） */}
-          <div className="relative z-[1] flex flex-col overflow-hidden rounded-[22px] border-[2.5px] border-gold bg-gradient-to-b from-[#FCF6E6] to-[#F4E5BF] shadow-[0_22px_50px_rgba(168,132,47,0.30)] md:-translate-y-2">
-            <div className="bg-gold py-4 text-center text-[20px] font-bold tracking-wide text-white">
+          <div className="relative z-[1] flex flex-col overflow-hidden rounded-lg border-2 border-gold bg-cream md:-translate-y-2">
+            <div className="bg-gold py-4 text-center text-[20px] font-extrabold tracking-wide text-white">
               法人売却の場合
             </div>
             {/* 比較軸 */}
-            <div className="flex items-center justify-center gap-2 bg-gold/[0.18] py-2.5 text-[14px] font-bold text-gold-dark">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold text-white">
+            <div className="flex items-center justify-center gap-2 bg-gold/[0.18] py-2.5 text-[14px] font-extrabold text-gold-dark">
+              <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-gold text-white">
                 <CheckMark className="h-3 w-3" />
               </span>
               会社の価値を現金化
@@ -160,7 +160,7 @@ export function Comparison() {
               {saleBadges.map((b) => (
                 <span
                   key={b}
-                  className="inline-flex items-center gap-1 rounded-full border border-gold/45 bg-white/70 px-3 py-1 text-[12.5px] font-bold text-gold-dark"
+                  className="inline-flex items-center gap-1 rounded-lg border border-gold/45 bg-white/70 px-3 py-1 text-[12.5px] font-extrabold text-gold-dark"
                 >
                   <CheckMark className="h-3 w-3" />
                   {b}
@@ -173,27 +173,27 @@ export function Comparison() {
               ))}
             </ul>
             {/* 価値が残る可能性の補足 */}
-            <p className="border-t border-gold/30 bg-gold/[0.12] px-6 py-3.5 text-center text-[14px] font-bold text-gold-dark">
+            <p className="border-t border-gold/30 bg-gold/[0.12] px-6 py-3.5 text-center text-[14px] font-extrabold text-gold-dark">
               ＼ 法人売却で価値が付くケースもあります ／
             </p>
           </div>
 
           {/* 中央VS（PCのみ・ネイビー背景／白文字／象徴）⑥ 左右カード中心により正確に合わせるため約12px上方向へ補正 */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-[calc(50%+12px)] md:block">
-            <span className="flex h-[96px] w-[96px] items-center justify-center rounded-full border-4 border-white bg-navy text-[38px] font-black italic text-white shadow-[0_12px_30px_rgba(27,42,74,0.35)]">
+            <span className="flex h-[96px] w-[96px] items-center justify-center rounded-lg border-4 border-white bg-navy text-[38px] font-black italic text-white">
               VS
             </span>
           </div>
         </div>
 
         {/* ───────── 下部CTA（LP後半の重要CTA：高コントラスト） ───────── */}
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 rounded-[20px] bg-navy px-10 py-9 shadow-[0_18px_44px_rgba(27,42,74,0.28)] md:flex-row md:justify-between md:text-left">
+        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 rounded-lg bg-navy px-10 py-9 md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-5">
-            <span className="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full bg-white/10 text-gold-light ring-1 ring-gold/40">
+            <span className="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-lg bg-white/10 text-gold-light ring-1 ring-gold/40">
               <IconBulb className="h-10 w-10" />
             </span>
             <div>
-              <p className="text-[22px] font-bold leading-snug text-white md:text-[24px]">
+              <p className="text-[22px] font-extrabold leading-snug text-white md:text-[24px]">
                 解散費用を支払う前に、
                 <br className="hidden md:block" />
                 会社が売却できるか確認しませんか？
@@ -205,7 +205,7 @@ export function Comparison() {
           </div>
           <a
             href="#contact"
-            className="flex shrink-0 items-center gap-2 rounded-full bg-cta px-9 py-5 text-[18px] font-bold text-white shadow-[0_10px_24px_rgba(184,57,43,0.45)] transition-colors hover:bg-cta-hover"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-cta px-9 py-5 text-[18px] font-extrabold text-white transition-colors hover:bg-cta-hover"
           >
             無料で査定する
             <Arrow />

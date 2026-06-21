@@ -15,7 +15,7 @@ type IllustrationPlaceholderProps = {
 export function IllustrationPlaceholder({
   label = "イラスト差し替え予定",
   ratio = "aspect-[4/3]",
-  rounded = "rounded-2xl",
+  rounded = "rounded-lg",
   className = "",
   tone = "light",
 }: IllustrationPlaceholderProps) {
@@ -29,7 +29,7 @@ export function IllustrationPlaceholder({
       className={`flex flex-col items-center justify-center gap-3 border border-dashed ${toneClasses} ${ratio} ${rounded} ${className}`}
     >
       <ImageIcon className="h-8 w-8" strokeWidth={1.5} />
-      <span className="px-4 text-center text-xs font-medium">{label}</span>
+      <span className="px-4 text-center text-xs font-normal">{label}</span>
     </div>
   )
 }

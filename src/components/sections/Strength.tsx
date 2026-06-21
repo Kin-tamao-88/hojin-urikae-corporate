@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { Building2, Clock, MapPin, Lightbulb } from "lucide-react"
+import { Building2, Clock, MapPin, Lightbulb, Check } from "lucide-react"
 import { SectionHeading } from "../ui/SectionHeading"
 
 /* ───────── 信頼を「数字・実績」で示す統一カード（横並び3枚） ───────── */
@@ -39,20 +39,20 @@ const stats: StatData[] = [
 
 function StatCard({ Icon, label, pre, big, unit, desc }: StatData) {
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-7 shadow-[0_12px_40px_rgba(27,42,74,0.08)] md:p-8">
+    <div className="flex h-full flex-col rounded-lg border border-navy/10 bg-white p-7 md:p-8">
       {/* ラベル＋アイコン */}
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-navy/[0.04] text-gold-dark ring-1 ring-gold/30">
           <Icon className="h-[22px] w-[22px]" strokeWidth={1.7} />
         </span>
-        <span className="text-[15px] font-bold tracking-wide text-navy">{label}</span>
+        <span className="text-[15px] font-extrabold tracking-wide text-navy">{label}</span>
       </div>
 
       {/* 数字（主役） */}
       <p className="mt-5 flex items-baseline gap-1.5">
-        {pre && <span className="text-lg font-bold text-ink-light">{pre}</span>}
+        {pre && <span className="text-lg font-extrabold text-ink-light">{pre}</span>}
         <span className="text-[52px] font-black leading-none tracking-tight text-navy">{big}</span>
-        {unit && <span className="text-xl font-bold text-gold-dark">{unit}</span>}
+        {unit && <span className="text-xl font-extrabold text-gold-dark">{unit}</span>}
       </p>
 
       <span className="mt-6 h-px w-full bg-navy/10" aria-hidden />
@@ -65,8 +65,8 @@ function StatCard({ Icon, label, pre, big, unit, desc }: StatData) {
 
 export function Strength() {
   return (
-    <section className="bg-white pt-8 pb-20 md:pt-10 md:pb-24">
-      <div className="container-lp flex flex-col gap-12">
+    <section className="bg-white pt-8 pb-12 md:pt-10 md:pb-14">
+      <div className="container-lp flex flex-col gap-8">
         <SectionHeading
           eyebrow="諦める前に、まずはご相談ください"
           title="当社が選ばれる確固たる強み"
@@ -80,11 +80,37 @@ export function Strength() {
           ))}
         </div>
 
+        {/* 実績帯（数字＋対応領域で情報密度を上げ信頼を補強） */}
+        <div className="grid grid-cols-2 gap-y-7 rounded-lg border border-gold/30 bg-cream px-6 py-7 md:grid-cols-4 md:gap-y-0 md:divide-x md:divide-navy/10 md:px-4 md:py-8">
+          <div className="flex flex-col items-center justify-center text-center md:px-4">
+            <span className="flex items-baseline gap-0.5 leading-none">
+              <span className="text-[34px] font-black tracking-tight text-navy md:text-[38px]">3,000</span>
+              <span className="text-base font-extrabold text-gold-dark">件以上</span>
+            </span>
+            <span className="mt-2 text-xs font-extrabold tracking-wide text-ink-light">累計相談実績</span>
+          </div>
+          {[
+            { v: "赤字法人", l: "対応実績あり" },
+            { v: "休眠法人", l: "対応実績あり" },
+            { v: "債務超過", l: "対応実績あり" },
+          ].map((it) => (
+            <div key={it.v} className="flex flex-col items-center justify-center text-center md:px-4">
+              <span className="flex items-center gap-1.5">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-gold/15 text-gold-dark">
+                  <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                </span>
+                <span className="text-[19px] font-black tracking-tight text-navy md:text-xl">{it.v}</span>
+              </span>
+              <span className="mt-2 text-xs font-extrabold tracking-wide text-ink-light">{it.l}</span>
+            </div>
+          ))}
+        </div>
+
         {/* 下部バナー（ネイビー×ゴールドの相談導線） */}
-        <div className="mx-auto flex w-full max-w-3xl items-center justify-center gap-4 rounded-2xl border border-gold/30 bg-navy px-8 py-6 text-center shadow-[0_14px_44px_rgba(27,42,74,0.18)]">
+        <div className="mx-auto flex w-full max-w-3xl items-center justify-center gap-4 rounded-lg border border-gold/30 bg-navy px-8 py-6 text-center">
           <Lightbulb className="h-7 w-7 shrink-0 text-gold" strokeWidth={1.6} />
           <div className="flex flex-col items-start gap-0.5 text-left">
-            <p className="text-lg font-bold text-white">まずはお客様の状況をお聞かせください</p>
+            <p className="text-lg font-extrabold text-white">まずはお客様の状況をお聞かせください</p>
             <p className="text-sm text-gold-light">最適なご提案をさせていただきます</p>
           </div>
         </div>

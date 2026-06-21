@@ -34,11 +34,11 @@ export function Faq() {
           {faqs.map((faq) => (
             <details
               key={faq.q}
-              className="group rounded-xl border border-navy/10 bg-cream/60 transition-colors open:bg-white open:shadow-card"
+              className="group rounded-lg border border-navy/10 bg-cream/60 transition-colors open:bg-white open:"
             >
               <summary className="flex cursor-pointer list-none items-center gap-4 p-5 md:p-6">
-                <span className="text-xl font-bold text-gold">Q.</span>
-                <span className="flex-1 text-base font-bold text-navy md:text-lg">
+                <span className="text-xl font-extrabold text-gold">Q.</span>
+                <span className="flex-1 text-base font-extrabold text-navy md:text-lg">
                   {faq.q}
                 </span>
                 <Plus
@@ -47,7 +47,7 @@ export function Faq() {
                 />
               </summary>
               <div className="flex gap-4 px-5 pb-6 md:px-6">
-                <span className="text-xl font-bold text-ink-muted">A.</span>
+                <span className="text-xl font-extrabold text-ink-muted">A.</span>
                 <p className="flex-1 pt-0.5 text-base leading-relaxed text-ink-light">
                   {faq.a}
                 </p>

@@ -26,7 +26,7 @@ export function Flow() {
     <section className="bg-white py-20 md:py-24">
       <div className="container-lp flex flex-col gap-12">
         <div className="flex flex-col items-center gap-3 text-center">
-          <h2 className="text-3xl font-bold leading-tight text-navy md:text-4xl">
+          <h2 className="text-3xl font-extrabold leading-tight text-navy md:text-4xl">
             売却まで、
             <br className="md:hidden" />
             <span className="relative inline-block">
@@ -56,12 +56,12 @@ export function Flow() {
             const Icon = step.icon
             return (
               <div key={step.no} className="contents">
-                <div className="relative flex flex-col items-center gap-3 rounded-2xl bg-white p-7 text-center shadow-card">
-                  <span className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-sm font-bold text-white">
+                <div className="relative flex flex-col items-center gap-3 rounded-lg bg-white p-7 text-center">
+                  <span className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-lg bg-gold text-sm font-extrabold text-white">
                     {step.no}
                   </span>
                   <Icon className="mt-3 h-9 w-9 text-navy" strokeWidth={1.5} />
-                  <h3 className="text-lg font-bold text-navy">{step.title}</h3>
+                  <h3 className="text-lg font-extrabold text-navy">{step.title}</h3>
                   <p className="text-sm leading-relaxed text-ink-light">
                     {step.desc}
                   </p>
@@ -79,11 +79,11 @@ export function Flow() {
           })}
         </div>
 
-        <div className="mx-auto flex items-center gap-3 rounded-full bg-mint px-7 py-4 text-center">
+        <div className="mx-auto flex items-center gap-3 rounded-lg bg-mint px-7 py-4 text-center">
           <ShieldCheck className="h-5 w-5 shrink-0 text-navy" strokeWidth={2} />
           <p className="text-sm text-ink md:text-base">
             ご相談からお支払いまで、専門スタッフが丁寧にサポート。
-            <span className="font-bold text-navy">安心してお任せください</span>
+            <span className="font-extrabold text-navy">安心してお任せください</span>
           </p>
         </div>
       </div>

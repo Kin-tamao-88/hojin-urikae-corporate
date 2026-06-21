@@ -28,7 +28,7 @@ export function CtaButton({
     <div className={`flex flex-col items-center gap-2 ${className}`}>
       <a
         href={href}
-        className={`group inline-flex items-center justify-center gap-2 rounded-full bg-cta font-bold text-white shadow-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-cta-hover hover:shadow-card-hover ${sizeClasses}`}
+        className={`group inline-flex items-center justify-center gap-2 rounded-lg bg-cta font-extrabold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-cta-hover hover: ${sizeClasses}`}
       >
         <span>{label}</span>
         <ChevronRight

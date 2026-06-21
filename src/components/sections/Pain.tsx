@@ -43,13 +43,13 @@ export function Pain() {
         {/* ───────── セクション見出し ───────── */}
         <div className="flex flex-col items-center gap-5 text-center">
           <div className="flex items-center gap-3">
-            <span className="h-[2px] w-8 rounded-full bg-cta" aria-hidden />
-            <span className="rounded-full bg-navy px-6 py-2 text-sm font-bold tracking-wide text-white">
+            <span className="h-[2px] w-8 rounded-lg bg-cta" aria-hidden />
+            <span className="rounded-lg bg-navy px-6 py-2 text-sm font-extrabold tracking-wide text-white">
               こんなお悩みありませんか？
             </span>
-            <span className="h-[2px] w-8 rounded-full bg-cta" aria-hidden />
+            <span className="h-[2px] w-8 rounded-lg bg-cta" aria-hidden />
           </div>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-navy md:text-[40px]">
+          <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-navy md:text-[40px]">
             会社を運営していて、こんな
             <span className="text-cta">お悩み</span>はありませんか？
           </h2>
@@ -60,11 +60,11 @@ export function Pain() {
           {pains.map((pain) => (
             <div
               key={pain.line1}
-              className="flex items-center gap-6 rounded-[20px] border border-navy/10 bg-white p-7"
+              className="flex items-center gap-6 rounded-lg border border-navy/10 bg-white p-7"
               style={{ boxShadow: CARD_SHADOW }}
             >
               {/* 悩みアイコン（PNG）：カード横幅の約35%・縦中央・既存レイアウト維持／比率維持 */}
-              <div className="flex aspect-[5/6] w-[35%] shrink-0 items-center justify-center rounded-2xl bg-skyblue">
+              <div className="flex aspect-[5/6] w-[35%] shrink-0 items-center justify-center rounded-lg bg-skyblue">
                 <img
                   src={pain.img}
                   alt=""
@@ -76,10 +76,10 @@ export function Pain() {
               <div className="flex flex-1 flex-col">
                 <h3>
                   <span className="flex items-center gap-2.5">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cta">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-cta">
                       <Check className="h-4 w-4 text-white" strokeWidth={3} />
                     </span>
-                    <span className="text-[17px] font-bold text-navy">{pain.line1}</span>
+                    <span className="text-[17px] font-extrabold text-navy">{pain.line1}</span>
                   </span>
                   <span className="mt-2 block whitespace-nowrap text-[22px] font-black leading-tight text-navy">
                     {pain.line2.map((seg, i) =>
@@ -104,7 +104,7 @@ export function Pain() {
 
         {/* ───────── 下部CTA ───────── */}
         <div
-          className="mx-auto flex max-w-3xl items-center gap-5 rounded-2xl border border-navy/25 bg-white px-8 py-6"
+          className="mx-auto flex max-w-3xl items-center gap-5 rounded-lg border border-navy/25 bg-white px-8 py-6"
           style={{ boxShadow: CARD_SHADOW }}
         >
           <span className="relative flex h-12 w-12 shrink-0 items-center justify-center">
@@ -113,7 +113,7 @@ export function Pain() {
           </span>
           <div className="text-left">
             <p className="text-[15px] text-ink">ひとつでも当てはまる方は、解散する前に</p>
-            <p className="text-[20px] font-bold leading-snug text-navy">
+            <p className="text-[20px] font-extrabold leading-snug text-navy">
               <span className="text-cta">「法人売却」という選択肢</span>
               をご検討ください。
             </p>

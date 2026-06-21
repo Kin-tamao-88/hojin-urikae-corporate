@@ -23,7 +23,7 @@ export function Hope() {
           {/* 見出し */}
           <div className="text-center md:text-left">
             {/* ② */}
-            <p className="text-[22px] font-bold leading-snug text-navy md:text-[26px]">
+            <p className="text-[22px] font-extrabold leading-snug text-navy md:text-[26px]">
               その悩み、
               <br className="md:hidden" />
               一人で抱え込まないでください。
@@ -40,9 +40,9 @@ export function Hope() {
               >
                 <defs>
                   <linearGradient id="hopeBrush" x1="0" y1="1" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#E8901E" />
-                    <stop offset="50%" stopColor="#F9A825" />
-                    <stop offset="100%" stopColor="#FFC24D" />
+                    <stop offset="0%" stopColor="#9a7a3a" />
+                    <stop offset="50%" stopColor="#9a7a3a" />
+                    <stop offset="100%" stopColor="#9a7a3a" />
                   </linearGradient>
                 </defs>
                 <path
@@ -50,7 +50,7 @@ export function Hope() {
                   fill="url(#hopeBrush)"
                 />
                 <path d="M26 30 C 140 23, 260 19, 384 10" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="1.5" strokeLinecap="round" />
-                <path d="M20 34 C 150 27, 270 23, 396 13" stroke="#C9760F" strokeOpacity="0.5" strokeWidth="1.2" strokeLinecap="round" />
+                <path d="M20 34 C 150 27, 270 23, 396 13" stroke="#846526" strokeOpacity="0.5" strokeWidth="1.2" strokeLinecap="round" />
               </svg>
               <span className="relative whitespace-nowrap text-[64px] font-black leading-none text-navy md:text-[86px]">
                 現金化できる
@@ -58,24 +58,24 @@ export function Hope() {
             </div>
 
             {/* ④ */}
-            <p className="mt-3 text-[38px] font-bold leading-tight text-navy md:text-[52px]">
+            <p className="mt-3 text-[38px] font-extrabold leading-tight text-navy md:text-[52px]">
               可能性が<span className="text-cta">あります！</span>
             </p>
           </div>
         </div>
 
         {/* ⑤ 補足カード（④ 説明文ではなく「重要な気付き」として読ませる：拡大・高さ増・カード感強化） */}
-        <div className="mx-auto mt-3 flex w-full max-w-md items-center justify-center gap-4 rounded-2xl border-[1.5px] border-gold/40 bg-white px-7 py-8 shadow-[0_8px_26px_rgba(27,42,74,0.09)]">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold text-white shadow-[0_4px_12px_rgba(168,132,47,0.30)]">
+        <div className="mx-auto mt-3 flex w-full max-w-md items-center justify-center gap-4 rounded-lg border-[1.5px] border-gold/40 bg-white px-7 py-8">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold text-white">
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12.5 l4.5 4.5 L19 7.5" />
             </svg>
           </span>
           {/* ⑤ 2行構成 */}
-          <p className="text-[17px] font-medium leading-relaxed text-ink md:text-[19px]">
+          <p className="text-[17px] font-normal leading-relaxed text-ink md:text-[19px]">
             解散予定だった法人でも、
             <br />
-            <span className="font-bold text-cta">売却できるケースがあります</span>
+            <span className="font-extrabold text-cta">売却できるケースがあります</span>
             。
           </p>
         </div>

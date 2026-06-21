@@ -33,7 +33,7 @@ function StatValue({ value, size = 40 }: { value: string; size?: number }) {
       />
       {/* 文言が長いブロックは月桂樹内側(約220px)に収まるよう size を下げて1行を維持 */}
       <span
-        className="whitespace-nowrap font-bold leading-none"
+        className="whitespace-nowrap font-extrabold leading-none"
         style={{ color: GOLD, fontSize: `${size}px` }}
       >
         {value}
@@ -50,11 +50,11 @@ function StatValue({ value, size = 40 }: { value: string; size?: number }) {
 }
 
 /* 完成図カラー */
-const NAVY = "#0B2348"
-const NAVY2 = "#1A2744"
-const GOLD = "#C9A84C"
-const RED = "#C0392B"
-const PAGE_BG = "#F8F7F4"
+const NAVY = "#1e3a5f"
+const NAVY2 = "#16304d"
+const GOLD = "#9a7a3a"
+const RED = "#b03023"
+const PAGE_BG = "#fafafa"
 
 const cards = [
   { icon: iconRedCompany, label: "赤字法人", ok: true },
@@ -90,10 +90,10 @@ export function Hero() {
               <Building2 className="h-7 w-7" strokeWidth={1.75} />
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="text-[22px] font-bold tracking-tight" style={{ color: NAVY }}>
+              <span className="text-[22px] font-extrabold tracking-tight" style={{ color: NAVY }}>
                 法人売却センター
               </span>
-              <span className="text-[12px]" style={{ color: "#8A93A0" }}>
+              <span className="text-[12px]" style={{ color: "#1e3a5f" }}>
                 法人の売却・譲渡を専門サポート
               </span>
             </span>
@@ -103,7 +103,7 @@ export function Hero() {
           <div className="flex items-center gap-10">
             {/* 電話番号 */}
             <div className="flex flex-col items-end leading-tight">
-              <span className="text-[12px]" style={{ color: "#8A93A0" }}>
+              <span className="text-[12px]" style={{ color: "#1e3a5f" }}>
                 お急ぎの方はお電話でご相談ください
               </span>
               <a
@@ -114,7 +114,7 @@ export function Hero() {
                 <Phone className="h-6 w-6" strokeWidth={2.5} style={{ color: GOLD }} />
                 03-XXXX-XXXX
               </a>
-              <span className="text-[11px]" style={{ color: "#8A93A0" }}>
+              <span className="text-[11px]" style={{ color: "#1e3a5f" }}>
                 受付時間 9:00-18:00（土日祝日を除く）
               </span>
             </div>
@@ -123,13 +123,13 @@ export function Hero() {
             <div className="flex flex-col items-center gap-1">
               <a
                 href="#contact"
-                className="flex items-center gap-2 rounded-md border-2 bg-white px-8 py-3.5 text-[18px] font-bold"
+                className="flex items-center gap-2 rounded-md border-2 bg-white px-8 py-3.5 text-[18px] font-extrabold"
                 style={{ color: NAVY, borderColor: NAVY }}
               >
                 <Mail className="h-[22px] w-[22px]" strokeWidth={2} />
                 無料で査定してみる
               </a>
-              <span className="text-[11px] font-bold" style={{ color: GOLD }}>
+              <span className="text-[11px] font-extrabold" style={{ color: GOLD }}>
                 24時間受付中
               </span>
             </div>
@@ -149,7 +149,7 @@ export function Hero() {
             >
               {/* 1. 濃紺帯バッジ */}
               <span
-                className="inline-flex w-fit items-center rounded-[6px] px-[26px] py-[14px] text-[18px] font-bold"
+                className="inline-flex w-fit items-center rounded-lg px-[26px] py-[14px] text-[18px] font-extrabold"
                 style={{ background: NAVY, color: GOLD }}
               >
                 赤字・債務・休眠法人もご相談可能
@@ -187,7 +187,7 @@ export function Hero() {
                   fontSize: "22px",
                   fontWeight: 600,
                   lineHeight: 1.5,
-                  color: "#33425C",
+                  color: "#1e3a5f",
                   margin: 0,
                   marginTop: "16px",
                 }}
@@ -202,7 +202,7 @@ export function Hero() {
                 {cards.map((card) => (
                   <div
                     key={card.label}
-                    className="flex h-[110px] flex-1 flex-row items-center justify-center gap-[12px] rounded-[10px] bg-white text-left"
+                    className="flex h-[110px] flex-1 flex-row items-center justify-center gap-[12px] rounded-lg bg-white text-left"
                     style={{ border: `1px solid ${NAVY}22` }}
                   >
                     <img
@@ -212,7 +212,7 @@ export function Hero() {
                       className="h-[40px] w-[40px] shrink-0 object-contain"
                     />
                     <span
-                      className="whitespace-pre-line text-[16px] font-bold leading-tight"
+                      className="whitespace-pre-line text-[16px] font-extrabold leading-tight"
                       style={{ color: NAVY }}
                     >
                       {card.label}
@@ -226,12 +226,12 @@ export function Hero() {
               <div className="relative mt-[16px] w-full">
                 <a
                   href="#contact"
-                  className="hero-cta-pulse relative flex h-[84px] w-full items-center justify-center rounded-full px-[32px] text-[28px] font-extrabold text-white"
+                  className="hero-cta-pulse relative flex h-[84px] w-full items-center justify-center rounded-lg px-[32px] text-[28px] font-extrabold text-white"
                   style={{ background: RED, boxShadow: "0 8px 20px rgba(192,57,43,0.28)" }}
                 >
                   {/* 60秒バッジはボタンの子要素＝パルスと一体で拡縮 */}
                   <span
-                    className="absolute -left-[4px] top-1/2 flex h-[72px] w-[72px] -translate-y-1/2 flex-col items-center justify-center rounded-full text-center text-[11px] font-bold leading-tight"
+                    className="absolute -left-[4px] top-1/2 flex h-[72px] w-[72px] -translate-y-1/2 flex-col items-center justify-center rounded-lg text-center text-[11px] font-extrabold leading-tight"
                     style={{ background: GOLD, color: NAVY, boxShadow: "0 4px 10px rgba(0,0,0,0.15)" }}
                   >
                     簡単60秒
@@ -250,7 +250,7 @@ export function Hero() {
               </div>
 
               {/* 8. CTA下補足文 */}
-              <p className="mt-[10px] text-center text-[14px]" style={{ color: "#8A93A0" }}>
+              <p className="mt-[10px] text-center text-[14px]" style={{ color: "#1e3a5f" }}>
                 査定だけでもOK｜しつこい営業は一切いたしません
               </p>
             </div>
@@ -309,9 +309,9 @@ export function Hero() {
                 >
                   <defs>
                     <linearGradient id="heroBrush" x1="0" y1="1" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#E8901E" />
-                      <stop offset="45%" stopColor="#F9A825" />
-                      <stop offset="100%" stopColor="#FFC24D" />
+                      <stop offset="0%" stopColor="#9a7a3a" />
+                      <stop offset="45%" stopColor="#9a7a3a" />
+                      <stop offset="100%" stopColor="#9a7a3a" />
                     </linearGradient>
                   </defs>
                   {/* 筆の本体：太さ不均一・両端テーパー・右肩上がり */}
@@ -331,7 +331,7 @@ export function Hero() {
                   {/* かすれ筋（暗） */}
                   <path
                     d="M22 42 C 150 34, 270 28, 392 16"
-                    stroke="#C9760F"
+                    stroke="#846526"
                     strokeOpacity="0.5"
                     strokeWidth="1.3"
                     strokeLinecap="round"
@@ -339,7 +339,7 @@ export function Hero() {
                   {/* 末尾のドライブラシ（かすれの飛び） */}
                   <path
                     d="M318 19 l 16 -2 M348 16 l 20 -3 M384 11 l 18 -3"
-                    stroke="#F9A825"
+                    stroke="#9a7a3a"
                     strokeWidth="3"
                     strokeLinecap="round"
                     opacity="0.85"
@@ -363,7 +363,7 @@ export function Hero() {
               {/* 注釈（グレー・小・通常フォント／視認性のため濃いめ） */}
               <span
                 className="mt-[8px] self-center whitespace-nowrap"
-                style={{ fontSize: "13px", fontWeight: 600, color: "#5B6776" }}
+                style={{ fontSize: "13px", fontWeight: 600, color: "#1e3a5f" }}
               >
                 （負債有り法人の実績）
               </span>
@@ -378,7 +378,7 @@ export function Hero() {
                 className="flex flex-1 flex-col items-center justify-center gap-[6px] text-center"
                 style={i > 0 ? { borderLeft: `1px solid ${NAVY2}` } : undefined}
               >
-                <span className="text-[16px] font-semibold text-white/90">{stat.label}</span>
+                <span className="text-[16px] font-extrabold text-white/90">{stat.label}</span>
                 <StatValue value={stat.value} size={stat.vSize} />
                 {/* 注釈は空でも行を確保し、全ブロックを3行構成に統一（数字行の縦位置を揃える） */}
                 <span className="text-[13px] text-white/70">{stat.note || " "}</span>

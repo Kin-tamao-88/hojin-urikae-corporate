@@ -27,14 +27,14 @@ export function SectionHeading({
   return (
     <div className={`flex flex-col gap-4 ${alignClasses}`}>
       {eyebrow && (
-        <span className="inline-flex items-center gap-2 text-sm font-bold tracking-wider text-gold">
+        <span className="inline-flex items-center gap-2 text-sm font-extrabold tracking-wider text-gold">
           <span className="h-px w-6 bg-gold" aria-hidden />
           {eyebrow}
           <span className="h-px w-6 bg-gold" aria-hidden />
         </span>
       )}
       <h2
-        className={`text-3xl font-bold leading-tight tracking-tight md:text-4xl ${titleColor}`}
+        className={`text-3xl font-extrabold leading-tight tracking-tight md:text-4xl ${titleColor}`}
       >
         {title}
       </h2>

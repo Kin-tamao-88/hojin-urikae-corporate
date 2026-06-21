@@ -9,7 +9,7 @@ export function Footer() {
             <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white/10 text-gold">
               <Building2 className="h-5 w-5" strokeWidth={1.75} />
             </span>
-            <span className="text-lg font-bold text-white">法人売却センター</span>
+            <span className="text-lg font-extrabold text-white">法人売却センター</span>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a href="#hero" className="hover:text-white">

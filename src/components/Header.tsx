@@ -10,7 +10,7 @@ export function Header() {
             <Building2 className="h-8 w-8" strokeWidth={1.75} />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-2xl font-bold tracking-tight text-navy">
+            <span className="text-2xl font-extrabold tracking-tight text-navy">
               法人売却センター
             </span>
             <span className="text-xs text-ink-muted">
@@ -34,14 +34,14 @@ export function Header() {
             </a>
             <a
               href="#contact"
-              className="flex items-center rounded-md bg-cta px-6 py-3.5 text-base font-bold text-white hover:bg-cta-hover"
+              className="flex items-center rounded-md bg-cta px-6 py-3.5 text-base font-extrabold text-white hover:bg-cta-hover"
             >
               無料で査定してみる
             </a>
           </div>
           <div className="flex w-full items-center justify-between text-[11px] text-ink-muted">
             <span>受付時間 9:00–18:00（土日祝を除く）</span>
-            <span className="font-bold text-gold">24時間受付中</span>
+            <span className="font-extrabold text-gold">24時間受付中</span>
           </div>
         </div>
       </div>

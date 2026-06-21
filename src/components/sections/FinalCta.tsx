@@ -12,7 +12,7 @@ export function FinalCta() {
         aria-hidden
       />
       <div className="container-lp relative flex flex-col items-center gap-7 text-center">
-        <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+        <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
           その法人、まだ
           <span className="text-gold">価値</span>が
           <br className="md:hidden" />
@@ -28,7 +28,7 @@ export function FinalCta() {
           <span className="text-sm text-white/60">お電話でのご相談はこちら</span>
           <a
             href="tel:03-0000-0000"
-            className="flex items-center gap-2 text-2xl font-bold"
+            className="flex items-center gap-2 text-2xl font-extrabold"
           >
             <Phone className="h-5 w-5 text-gold" strokeWidth={2.5} />
             03-XXXX-XXXX

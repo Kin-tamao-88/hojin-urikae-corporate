@@ -25,7 +25,7 @@ const cases = [
 
 export function CaseStudy() {
   return (
-    <section className="bg-white py-20 md:py-24">
+    <section className="bg-white pt-10 pb-20 md:pt-12 md:pb-24">
       <div className="container-lp flex flex-col gap-12">
         <SectionHeading
           eyebrow="活用事例"
@@ -37,22 +37,22 @@ export function CaseStudy() {
           {cases.map((c) => (
             <div
               key={c.no}
-              className="grid grid-cols-1 gap-8 rounded-2xl bg-cream p-7 md:grid-cols-[1.3fr_1fr] md:p-10"
+              className="grid grid-cols-1 gap-8 rounded-lg bg-cream p-7 md:grid-cols-[1.3fr_1fr] md:p-10"
             >
               {/* 左：状況→結果 */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <span className="rounded-md bg-navy px-3 py-1 text-xs font-bold tracking-wider text-gold">
+                  <span className="rounded-md bg-navy px-3 py-1 text-xs font-extrabold tracking-wider text-gold">
                     {c.no}
                   </span>
-                  <span className="text-lg font-bold text-navy">{c.industry}</span>
+                  <span className="text-lg font-extrabold text-navy">{c.industry}</span>
                 </div>
 
                 <div>
-                  <p className="mb-2 text-sm font-bold text-navy">ご相談時の状況</p>
-                  <div className="rounded-xl bg-white px-5 py-4">
+                  <p className="mb-2 text-sm font-extrabold text-navy">ご相談時の状況</p>
+                  <div className="rounded-lg bg-white px-5 py-4">
                     {c.situation.map((s) => (
-                      <p key={s} className="text-xl font-bold leading-snug text-ink">
+                      <p key={s} className="text-xl font-extrabold leading-snug text-ink">
                         {s}
                       </p>
                     ))}
@@ -63,10 +63,10 @@ export function CaseStudy() {
                 <ArrowDown className="mx-auto h-5 w-5 text-gold" strokeWidth={2.5} />
 
                 <div>
-                  <span className="rounded-full bg-gold/15 px-3 py-1 text-xs font-bold text-gold-dark">
+                  <span className="rounded-lg bg-gold/15 px-3 py-1 text-xs font-extrabold text-gold-dark">
                     法人売却の結果
                   </span>
-                  <p className="mt-2 text-3xl font-bold leading-tight text-gold-dark md:text-4xl">
+                  <p className="mt-2 text-3xl font-extrabold leading-tight text-gold-dark md:text-4xl">
                     {c.result}
                   </p>
                 </div>
@@ -76,7 +76,7 @@ export function CaseStudy() {
               <div className="flex flex-col items-center justify-center gap-3 text-center">
                 <IllustrationPlaceholder
                   ratio="aspect-square"
-                  rounded="rounded-full"
+                  rounded="rounded-lg"
                   className="w-24"
                   label="仮素材"
                 />

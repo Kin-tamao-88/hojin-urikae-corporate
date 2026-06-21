@@ -3,36 +3,39 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // CLAUDE.md 準拠パレット（紺#1e3a5f / 赤#b03023 / 金#9a7a3a / 背景#ffffff・#fafafa / 金薄#fff8ee / 金枠#d4af37）
       colors: {
         navy: {
-          DEFAULT: "#1B2A4A",
-          dark: "#14213A",
-          light: "#2A3E63",
+          DEFAULT: "#1e3a5f",
+          dark: "#16304d",
+          light: "#2c4a70",
         },
         gold: {
-          DEFAULT: "#C9A66B",
-          light: "#DCC079",
-          dark: "#A8842F",
+          DEFAULT: "#9a7a3a",
+          light: "#d4af37", // ゴールドボーダー用
+          dark: "#846526",
         },
-        cream: "#F8F1E5",
+        cream: "#fff8ee",
+        // グレー系テキスト禁止：本文も #1e3a5f に統一
         ink: {
-          DEFAULT: "#1F2A37",
-          light: "#5B6776",
-          muted: "#8A93A0",
+          DEFAULT: "#1e3a5f",
+          light: "#1e3a5f",
+          muted: "#1e3a5f",
         },
         cta: {
-          DEFAULT: "#B8392B",
-          hover: "#9B2F22",
+          DEFAULT: "#b03023",
+          hover: "#8f2519",
         },
+        // グレー系背景禁止：オフホワイトへ
         slate: {
-          card: "#8B96A8",
-          bg: "#F1F2F5",
+          card: "#1e3a5f",
+          bg: "#fafafa",
         },
         teal: {
-          DEFAULT: "#3BB6C9",
+          DEFAULT: "#1e3a5f",
         },
-        mint: "#EAF6EE",
-        skyblue: "#E9F3F6",
+        mint: "#fafafa",
+        skyblue: "#fafafa",
       },
       fontFamily: {
         sans: [
@@ -47,11 +50,11 @@ export default {
       maxWidth: {
         content: "1120px",
       },
+      // CLAUDE.md: box-shadow 禁止 → 全て none（境界は border 1px #e2e8f0 で代替）
       boxShadow: {
-        card: "0 1px 3px rgba(27, 42, 74, 0.06), 0 8px 24px rgba(27, 42, 74, 0.06)",
-        "card-hover":
-          "0 2px 6px rgba(27, 42, 74, 0.08), 0 16px 40px rgba(27, 42, 74, 0.10)",
-        cta: "0 8px 20px rgba(217, 131, 31, 0.28)",
+        card: "none",
+        "card-hover": "none",
+        cta: "none",
       },
     },
   },
