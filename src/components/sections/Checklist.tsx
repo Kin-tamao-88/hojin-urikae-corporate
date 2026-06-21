@@ -50,15 +50,11 @@ export function Checklist() {
 
         {/* ===== CTAセクション（チェックリスト下・余白48px・同幅 max-680・中央揃え） ===== */}
         <div className="relative mx-auto mt-12 w-full max-w-[720px] overflow-hidden rounded-lg border-2 border-[#D4AF37] bg-[#FFF8EE] px-5 py-8 md:p-8">
-          {/* ⑤ 右上：金の丸バッジ＋3点しっぽ（モバイルは赤ピルとの重なり回避のため非表示） */}
-          <div className="absolute right-3 top-3 z-10 hidden md:right-6 md:top-6 md:block">
-            <div className="flex h-[80px] w-[80px] flex-col items-center justify-center whitespace-nowrap rounded-lg bg-[#9a7a3a] text-center text-[11px] font-extrabold leading-snug tracking-tight text-white md:h-[150px] md:w-[150px] md:text-[15px]">
-              まずは価値を
-              <br />
-              確認してみませんか？
-            </div>
-            <span className="absolute -bottom-1 left-2 h-2.5 w-2.5 rounded-lg bg-[#9a7a3a]" aria-hidden />
-            <span className="absolute -bottom-3.5 left-0 h-1.5 w-1.5 rounded-lg bg-[#9a7a3a]" aria-hidden />
+          {/* ⑤ 右上：金のタグ（角に収める・PCのみ） */}
+          <div className="absolute right-5 top-5 z-10 hidden whitespace-nowrap rounded-lg bg-[#9a7a3a] px-4 py-2.5 text-center text-[13px] font-extrabold leading-snug text-white md:block">
+            まずは価値を
+            <br />
+            確認してみませんか？
           </div>
 
           <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-5 text-center">
