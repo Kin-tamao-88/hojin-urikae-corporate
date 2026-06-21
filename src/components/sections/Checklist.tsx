@@ -72,17 +72,17 @@ export function Checklist() {
             {/* ④ メイン見出し（左上に光線3本＋手書き金下線） */}
             <div className="relative inline-flex items-end justify-center gap-1 pt-1">
               <svg
-                className="pointer-events-none absolute -left-4 -top-2 h-11 w-11 text-[#D4AF37] md:-left-7 md:-top-3 md:h-16 md:w-16"
+                className="pointer-events-none absolute -left-1 -top-5 h-8 w-8 text-[#9a7a3a] md:-left-2 md:-top-7 md:h-11 md:w-11"
                 viewBox="0 0 48 48"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="3"
+                strokeWidth="3.5"
                 strokeLinecap="round"
                 aria-hidden
               >
-                <path d="M10 40 L4 28" />
-                <path d="M20 30 L15 13" />
-                <path d="M33 26 L35 8" />
+                <path d="M6 30 L2 22" />
+                <path d="M20 24 L18 11" />
+                <path d="M35 26 L41 16" />
               </svg>
               <span className="relative leading-none">
                 <span className="text-[40px] font-black text-[#b03023] md:text-[56px]">査定対象</span>
