@@ -34,7 +34,7 @@ export function Flow() {
         {/* ヘッダー */}
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <h2 style={{ fontSize: "40px", fontWeight: 900, color: "#1e3a5f", lineHeight: 1.3, margin: 0 }}>
-            売却まで、<span style={{ color: "#b03023" }}>驚くほど簡単です</span>
+            すべてがオンラインで完結、<span style={{ color: "#b03023" }}>面倒な手続きは不要です。</span>
           </h2>
           <p style={{ fontSize: "14px", color: "#888", marginTop: "10px" }}>
             面倒な手続きはすべてサポートいたします
