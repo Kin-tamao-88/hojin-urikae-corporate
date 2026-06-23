@@ -48,11 +48,8 @@ const stats: { value: string; label: string; note: string; vSize?: number }[] = 
 export function Hero() {
   return (
     <section id="hero" style={{ background: PAGE_BG }}>
-      {/* ───── ヘッダー：ロゴ左 ｜ 電話中央 ｜ CTA右 ───── */}
       <header className="w-full bg-white" style={{ borderBottom: `1px solid ${NAVY}1a` }}>
         <div className="mx-auto flex h-[96px] w-full max-w-[1536px] items-center justify-between px-10">
-
-          {/* 左：ロゴ */}
           <a href="#hero" className="flex items-center gap-3.5">
             <span className="flex h-12 w-12 items-center justify-center rounded-md" style={{ background: NAVY, color: GOLD }}>
               <Building2 className="h-7 w-7" strokeWidth={1.75} />
@@ -62,8 +59,6 @@ export function Hero() {
               <span className="text-[12px]" style={{ color: NAVY }}>法人の売却・譲渡を専門サポート</span>
             </span>
           </a>
-
-          {/* 中央：電話番号 */}
           <div className="flex flex-col items-center leading-tight">
             <span className="text-[12px]" style={{ color: NAVY }}>お急ぎの方はお電話でご相談ください</span>
             <a href="tel:03-0000-0000" className="flex items-center gap-2 text-[32px] font-black" style={{ color: NAVY }}>
@@ -72,8 +67,6 @@ export function Hero() {
             </a>
             <span className="text-[11px]" style={{ color: NAVY }}>受付時間 9:00-18:00（土日祝日を除く）</span>
           </div>
-
-          {/* 右：CTA */}
           <div className="flex flex-col items-center gap-1">
             <a href="#contact" className="flex items-center gap-2 rounded-md border-2 bg-white px-8 py-3.5 text-[18px] font-extrabold" style={{ color: NAVY, borderColor: NAVY }}>
               <Mail className="h-[22px] w-[22px]" strokeWidth={2} />
@@ -81,41 +74,39 @@ export function Hero() {
             </a>
             <span className="text-[11px] font-extrabold" style={{ color: GOLD }}>24時間受付中</span>
           </div>
-
         </div>
       </header>
 
-      {/* ───── メインビジュアルエリア ───── */}
       <div className="w-full px-[10px] py-[10px]">
         <div className="mx-auto w-full max-w-[1516px]">
-
           <div className="relative flex overflow-hidden bg-white">
 
             {/* 左カラム：約58% */}
             <div className="relative flex flex-col py-[40px] pl-[60px] pr-[16px]" style={{ flexBasis: "58%", flexShrink: 0 }}>
 
-              {/* 濃紺バッジ */}
               <span className="inline-flex w-fit items-center rounded-lg px-[26px] py-[14px] text-[18px] font-extrabold" style={{ background: NAVY, color: GOLD }}>
                 赤字・債務・休眠法人もご相談可能
               </span>
 
-              {/* メインコピー3行 */}
+              {/* メインコピー */}
               <p className="hero-heading-lead">放置している法人を</p>
-              <p className="hero-heading-main">
-                <span className="hero-main-gold">高額</span>
-                <span className="hero-main-de">で</span>
-                <span className="hero-main-gold">売却</span>
-              </p>
-              <p className="hero-heading-close">しませんか？</p>
 
-              {/* サブコピー */}
+              {/* 高額 → 1行目 */}
+              <div style={{ paddingLeft: "40px", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+                <span style={{ fontSize: "100px", fontWeight: 900, color: "#c0341a", display: "block" }}>高額</span>
+                {/* で売却しませんか？ → 2行目・ハイライト付き */}
+                <span style={{ position: "relative", display: "inline-block", fontSize: "72px", fontWeight: 900, lineHeight: 1.1, color: "#1a1a1a", whiteSpace: "nowrap" }}>
+                  <span aria-hidden style={{ position: "absolute", left: 0, right: 0, bottom: "0.05em", height: "0.28em", background: "rgba(200,165,38,0.80)", borderRadius: "1px 2px 1px 2px", transform: "rotate(-0.3deg)", zIndex: 0 }} />
+                  <span style={{ position: "relative" }}>で売却しませんか？</span>
+                </span>
+              </div>
+
               <p style={{ fontSize: "22px", fontWeight: 600, lineHeight: 1.5, color: NAVY, margin: 0, marginTop: "16px" }}>
                 法人売却・事業承継の専門チームが
                 <br />
                 全国対応・秘密厳守でサポートいたします
               </p>
 
-              {/* 4カード */}
               <div className="mt-[18px] flex gap-[10px]">
                 {cards.map((card) => (
                   <div
@@ -132,7 +123,6 @@ export function Hero() {
                 ))}
               </div>
 
-              {/* CTA：赤ボタン＋金バッジ */}
               <div className="relative mt-[16px] w-full">
                 <a
                   href="#contact"
@@ -140,7 +130,7 @@ export function Hero() {
                   style={{ background: RED }}
                 >
                   <span
-                    className="absolute -left-[4px] top-1/2 flex h-[72px] w-[72px] -translate-y-1/2 flex-col items-center justify-center rounded-lg text-center text-[11px] font-extrabold leading-tight"
+                    className="absolute left-[8px] top-1/2 flex h-[64px] w-[64px] -translate-y-1/2 flex-col items-center justify-center rounded-md text-center text-[11px] font-extrabold leading-tight"
                     style={{ background: GOLD, color: NAVY }}
                   >
                     簡単60秒
@@ -155,13 +145,12 @@ export function Hero() {
                 </a>
               </div>
 
-              {/* CTA下補足 */}
               <p className="mt-[10px] text-center text-[14px]" style={{ color: NAVY }}>
                 査定だけでもOK｜しつこい営業は一切いたしません
               </p>
             </div>
 
-            {/* 右カラム：約42%（ヒーロービジュアル） */}
+            {/* 右カラム */}
             <div className="relative overflow-hidden" style={{ flexBasis: "42%", flexShrink: 0 }}>
               <img
                 src={heroVisual}
@@ -182,16 +171,15 @@ export function Hero() {
               />
             </div>
 
-            {/* 査定最高額：右側に斜め配置（参考画像準拠） */}
+            {/* 査定最高額：絶対配置 */}
             <div
-              className="pointer-events-none absolute left-[41%] top-[124px] z-30 flex flex-col items-start"
+              className="pointer-events-none absolute left-[41%] top-[60px] z-30 flex flex-col items-start"
               style={{ transform: "rotate(-6deg)", transformOrigin: "left center" }}
               aria-hidden
             >
               <span className="whitespace-nowrap leading-none" style={{ fontSize: "37px", fontWeight: 800, color: RED }}>
                 査定最高額
               </span>
-
               <div className="relative mt-[12px]">
                 <svg
                   className="absolute -left-[10px] -bottom-[12px] -z-10 h-[48px] w-[420px]"
@@ -205,7 +193,8 @@ export function Hero() {
                       <stop offset="100%" stopColor="#E5C04A" />
                     </linearGradient>
                   </defs>
-                  <path d="M8 40 C 80 33, 150 33, 232 24 C 308 16, 360 14, 412 6 C 372 24, 312 26, 246 31 C 162 37, 84 39, 14 45 Z" fill="url(#heroBrush)" />
+                  <path d="M4 44 C 60 36, 130 30, 220 20 C 300 12, 360 10, 415 4 C 390 18, 330 22, 248 30 C 158 38, 72 42, 10 50 Z" fill="url(#heroBrush)" opacity="0.95" />
+                  <path d="M6 42 C 80 34, 180 26, 310 16 C 360 12, 395 8, 414 5 C 400 14, 365 18, 318 22 C 200 30, 90 38, 12 47 Z" fill="#E5C04A" opacity="0.35" />
                   <path d="M30 37 C 140 30, 260 23, 380 12" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="1.6" strokeLinecap="round" />
                   <path d="M22 42 C 150 34, 270 28, 392 16" stroke="#846526" strokeOpacity="0.5" strokeWidth="1.3" strokeLinecap="round" />
                   <path d="M318 19 l 16 -2 M348 16 l 20 -3 M384 11 l 18 -3" stroke="#E5C04A" strokeWidth="3" strokeLinecap="round" opacity="0.85" />
@@ -216,7 +205,6 @@ export function Hero() {
                   <span style={{ fontSize: "52px", fontWeight: 700, marginLeft: "4px" }}>！</span>
                 </span>
               </div>
-
               <span className="mt-[16px] whitespace-nowrap leading-none" style={{ fontSize: "24px", fontWeight: 700, color: NAVY }}>
                 当日払いの実績アリ
               </span>
@@ -227,7 +215,7 @@ export function Hero() {
 
           </div>
 
-          {/* ───── 実績バー ───── */}
+          {/* 実績バー */}
           <div className="flex h-[150px] w-full" style={{ background: NAVY }}>
             {stats.map((stat, i) => (
               <div
@@ -237,7 +225,7 @@ export function Hero() {
               >
                 <span className="text-[16px] font-extrabold text-white/90">{stat.label}</span>
                 <StatValue value={stat.value} size={stat.vSize} />
-                <span className="text-[13px] text-white/70">{stat.note || " "}</span>
+                <span className="text-[13px] text-white/70">{stat.note || " "}</span>
               </div>
             ))}
           </div>

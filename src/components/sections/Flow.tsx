@@ -1,91 +1,144 @@
-import { ChevronRight, Laptop, ClipboardCheck, Handshake, ShieldCheck } from "lucide-react"
+import { Laptop, ClipboardCheck, Handshake, ShieldCheck } from "lucide-react"
 
 const steps = [
   {
     no: "01",
     icon: Laptop,
     title: "無料査定",
-    desc: "フォームから法人情報を入力。30秒で完了します。",
+    desc: "フォームから法人情報を入力。",
+    highlight: "30秒で完了します。",
   },
   {
     no: "02",
     icon: ClipboardCheck,
     title: "ご提案",
-    desc: "最短即日で査定結果と売却条件をご提案。",
+    desc: "で査定結果と売却条件をご提案します。",
+    highlight: "最短即日",
+    highlightBefore: true,
   },
   {
     no: "03",
     icon: Handshake,
     title: "ご契約・完了",
-    desc: "ご契約手続き後、売却代金をお支払いします。",
+    desc: "ご契約手続き後、",
+    highlight: "売却代金",
+    highlightAfter: "をお支払いします。",
   },
 ]
 
 export function Flow() {
   return (
-    <section className="bg-white py-20 md:py-24">
-      <div className="container-lp flex flex-col gap-12">
-        <div className="flex flex-col items-center gap-3 text-center">
-          <h2 className="text-3xl font-extrabold leading-tight text-navy md:text-4xl">
-            売却まで、
-            <br className="md:hidden" />
-            <span className="relative inline-block">
-              驚くほど簡単です
-              <svg
-                className="absolute -bottom-1 left-0 w-full text-gold"
-                viewBox="0 0 200 8"
-                preserveAspectRatio="none"
-                aria-hidden
-              >
-                <path
-                  d="M0,5 Q50,0 100,5 T200,5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                />
-              </svg>
-            </span>
+    <section style={{ background: "#faf9f6", paddingTop: "48px", paddingBottom: "48px" }}>
+      <div className="container-lp">
+
+        {/* ヘッダー */}
+        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          <h2 style={{ fontSize: "40px", fontWeight: 900, color: "#1e3a5f", lineHeight: 1.3, margin: 0 }}>
+            売却まで、<span style={{ color: "#b03023" }}>驚くほど簡単です</span>
           </h2>
-          <p className="text-base text-ink-light">
+          <p style={{ fontSize: "14px", color: "#888", marginTop: "10px" }}>
             面倒な手続きはすべてサポートいたします
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+        {/* ステップ */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 48px 1fr 48px 1fr", alignItems: "center", gap: "0", marginBottom: "32px" }}>
           {steps.map((step, index) => {
             const Icon = step.icon
             return (
-              <div key={step.no} className="contents">
-                <div className="relative flex flex-col items-center gap-3 rounded-lg bg-white p-7 text-center">
-                  <span className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-lg bg-gold text-sm font-extrabold text-white">
+              <>
+                {/* カード */}
+                <div key={step.no} style={{
+                  background: "#ffffff",
+                  border: "1.5px solid #e8e0d0",
+                  borderRadius: "20px 20px 12px 12px",
+                  padding: "32px 20px 24px",
+                  textAlign: "center",
+                  position: "relative",
+                }}>
+                  {/* 番号バッジ */}
+                  <div style={{
+                    position: "absolute",
+                    top: "-20px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#1a2744",
+                    color: "#ffffff",
+                    fontSize: "16px",
+                    fontWeight: 900,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}>
                     {step.no}
-                  </span>
-                  <Icon className="mt-3 h-9 w-9 text-navy" strokeWidth={1.5} />
-                  <h3 className="text-lg font-extrabold text-navy">{step.title}</h3>
-                  <p className="text-sm leading-relaxed text-ink-light">
-                    {step.desc}
+                  </div>
+
+                  {/* アイコン円形背景 */}
+                  <div style={{
+                    width: "80px",
+                    height: "80px",
+                    borderRadius: "50%",
+                    background: "rgba(212,175,55,0.1)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto 16px",
+                  }}>
+                    <Icon size={36} color="#1a2744" strokeWidth={1.5} />
+                  </div>
+
+                  {/* タイトル */}
+                  <h3 style={{ fontSize: "20px", fontWeight: 900, color: "#1e3a5f", margin: "0 0 10px" }}>
+                    {step.title}
+                  </h3>
+
+                  {/* 説明文 */}
+                  <p style={{ fontSize: "14px", lineHeight: 1.8, color: "#555", margin: 0 }}>
+                    {step.highlightBefore && (
+                      <><span style={{ color: "#D4AF37", fontWeight: 700 }}>{step.highlight}</span>{step.desc}</>
+                    )}
+                    {!step.highlightBefore && !step.highlightAfter && (
+                      <>{step.desc}<span style={{ color: "#D4AF37", fontWeight: 700 }}>{step.highlight}</span></>
+                    )}
+                    {step.highlightAfter && (
+                      <>{step.desc}<span style={{ color: "#D4AF37", fontWeight: 700 }}>{step.highlight}</span>{step.highlightAfter}</>
+                    )}
                   </p>
                 </div>
+
+                {/* 矢印 */}
                 {index < steps.length - 1 && (
-                  <div className="flex items-center justify-center">
-                    <ChevronRight
-                      className="h-6 w-6 rotate-90 text-gold md:rotate-0"
-                      strokeWidth={2}
-                    />
+                  <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="0,8 22,8 22,0 36,14 22,28 22,20 0,20" fill="#D4AF37" />
+                    </svg>
                   </div>
                 )}
-              </div>
+              </>
             )
           })}
         </div>
 
-        <div className="mx-auto flex items-center gap-3 rounded-lg bg-mint px-7 py-4 text-center">
-          <ShieldCheck className="h-5 w-5 shrink-0 text-navy" strokeWidth={2} />
-          <p className="text-sm text-ink md:text-base">
+        {/* 下部帯 */}
+        <div style={{
+          background: "rgba(212,175,55,0.06)",
+          border: "1px solid rgba(212,175,55,0.3)",
+          borderRadius: "10px",
+          padding: "18px 28px",
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+        }}>
+          <ShieldCheck size={32} color="#1a2744" strokeWidth={1.5} style={{ flexShrink: 0 }} />
+          <p style={{ fontSize: "15px", color: "#333", margin: 0, lineHeight: 1.7 }}>
             ご相談からお支払いまで、専門スタッフが丁寧にサポート。
-            <span className="font-extrabold text-navy">安心してお任せください</span>
+            <span style={{ fontWeight: 900, color: "#1e3a5f" }}>安心してお任せください。</span>
           </p>
         </div>
+
       </div>
     </section>
   )

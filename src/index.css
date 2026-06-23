@@ -41,29 +41,39 @@
     word-break: keep-all;
   }
 
-  .hero-heading-main .hero-main-gold {
-    font-size: 100px;
+  .hero-heading-main .hero-main-accent {
+    font-size: 110px;
     font-weight: 900;
-    line-height: 0.95;
-    color: #E5C04A;
-  }
-
-  .hero-heading-main .hero-main-de {
-    font-size: 100px;
-    font-weight: 900;
-    color: #E5C04A;
+    line-height: 0.9;
+    color: #d43515;
   }
 
   .hero-heading-close {
     width: 90%;
     margin: 0 0 22px 0;
     padding-left: 40px;
-    font-size: 48px;
-    font-weight: 800;
+    font-size: 62px;
+    font-weight: 900;
     line-height: 1;
-    color: #1e3a5f;
+    color: #1a1a1a;
     white-space: nowrap;
     word-break: keep-all;
+  }
+
+  .hero-close-marker {
+    position: relative;
+    display: inline-block;
+  }
+  .hero-close-marker::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: 7px;
+    height: 30%;
+    background: rgba(198, 162, 35, 0.45);
+    border-radius: 2px 3px 2px 4px;
+    transform: rotate(-0.5deg) skewX(-0.8deg);
   }
 
   /* Hero 赤CTA：心拍のようなパルス（scale のみ／box-shadow禁止）。60秒バッジは子要素として一体で拡縮 */
