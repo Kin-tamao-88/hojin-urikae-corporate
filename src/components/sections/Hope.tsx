@@ -1,17 +1,12 @@
 import hopePerson from "../../assets/pain/03-pain-business-executive.png"
 
-/**
- * Hope（Pain の下・Comparison のリード）。
- * 視線導線：① 人物 → ②「その悩み…」→ ③「現金化できる」→ ④「可能性があります！」→ ⑤ 補足カード → ⑥ 比較表。
- * 「現金化できる」をセクション最大の視覚要素にする。完成図 2026-06-20 準拠。
- */
 export function Hope() {
   return (
     <section className="bg-white pt-10 pb-2 md:pt-14 md:pb-6">
       <div className="container-lp flex flex-col items-center">
-        {/* 人物 ＋ 見出し（縦中央揃え・1つの塊／全体を少し左へ寄せ左余白を解消） */}
+        {/* 人物＋見出し（中央揃え・1つの塊・少し左へ寄せ） */}
         <div className="flex items-center justify-center gap-5 md:gap-6 md:-translate-x-5">
-          {/* ① 人物（視線起点・大きめ／肩から上） */}
+          {/* 人物写真 */}
           <img
             src={hopePerson}
             alt=""
@@ -20,16 +15,16 @@ export function Hope() {
             style={{ objectPosition: "center 3%" }}
           />
 
-          {/* 見出し */}
+          {/* 見出しエリア */}
           <div className="text-center md:text-left">
-            {/* ② */}
+            {/* サブコピー */}
             <p className="text-[22px] font-extrabold leading-snug text-navy md:text-[26px]">
               その悩み、
               <br className="md:hidden" />
               一人で抱え込まないでください。
             </p>
 
-            {/* ③ 現金化できる（絶対的主役：特大・超太字・金筆下線） */}
+            {/* メインコピー（金筆ストローク付き） */}
             <div className="relative mt-3 inline-block">
               <svg
                 className="pointer-events-none absolute -bottom-2 left-[-10px] -z-0 h-[28px] w-[calc(100%+20px)]"
@@ -40,9 +35,9 @@ export function Hope() {
               >
                 <defs>
                   <linearGradient id="hopeBrush" x1="0" y1="1" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#9a7a3a" />
-                    <stop offset="50%" stopColor="#9a7a3a" />
-                    <stop offset="100%" stopColor="#9a7a3a" />
+                    <stop offset="0%" stopColor="#D4AF37" />
+                    <stop offset="50%" stopColor="#D4AF37" />
+                    <stop offset="100%" stopColor="#D4AF37" />
                   </linearGradient>
                 </defs>
                 <path
@@ -53,30 +48,28 @@ export function Hope() {
                 <path d="M20 34 C 150 27, 270 23, 396 13" stroke="#846526" strokeOpacity="0.5" strokeWidth="1.2" strokeLinecap="round" />
               </svg>
               <span className="relative whitespace-nowrap text-[64px] font-black leading-none text-navy md:text-[86px]">
-                現金化できる
+                まだ売却できる
               </span>
             </div>
 
-            {/* ④ */}
+            {/* 可能性あり */}
             <p className="mt-3 text-[38px] font-extrabold leading-tight text-navy md:text-[52px]">
               可能性が<span className="text-cta">あります！</span>
             </p>
           </div>
         </div>
 
-        {/* ⑤ 補足カード（④ 説明文ではなく「重要な気付き」として読ませる：拡大・高さ増・カード感強化） */}
+        {/* 確認カード */}
         <div className="mx-auto mt-3 flex w-full max-w-md items-center justify-center gap-4 rounded-lg border-[1.5px] border-gold/40 bg-white px-7 py-8">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold text-white">
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12.5 l4.5 4.5 L19 7.5" />
             </svg>
           </span>
-          {/* ⑤ 2行構成 */}
           <p className="text-[17px] font-normal leading-relaxed text-ink md:text-[19px]">
-            解散予定だった法人でも、
+            解散済みだった法人でも、
             <br />
-            <span className="font-extrabold text-cta">売却できるケースがあります</span>
-            。
+            <span className="font-extrabold text-cta">売却できるケースがあります。</span>
           </p>
         </div>
       </div>

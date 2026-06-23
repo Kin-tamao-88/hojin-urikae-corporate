@@ -11,9 +11,9 @@ export default {
           light: "#2c4a70",
         },
         gold: {
-          DEFAULT: "#9a7a3a",
-          light: "#d4af37", // ゴールドボーダー用
-          dark: "#846526",
+          DEFAULT: "#D4AF37",  // 共通ゴールド（強み・比較・CTA等）
+          hero: "#E5C04A",     // ヒーロー専用ゴールド
+          dark: "#9a7a3a",     // ダーク寄りのゴールド（テキスト用）
         },
         cream: "#fff8ee",
         // グレー系テキスト禁止：本文も #1e3a5f に統一

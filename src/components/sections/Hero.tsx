@@ -52,7 +52,7 @@ function StatValue({ value, size = 40 }: { value: string; size?: number }) {
 /* 完成図カラー */
 const NAVY = "#1e3a5f"
 const NAVY2 = "#16304d"
-const GOLD = "#9a7a3a"
+const GOLD = "#E5C04A"
 const RED = "#b03023"
 const PAGE_BG = "#fafafa"
 
@@ -158,26 +158,9 @@ export function Hero() {
               {/* 2-4. 見出し3行（完全に独立した要素・共通サイズ制御なし） */}
               <p className="hero-heading-lead">放置している法人を</p>
               <p className="hero-heading-main">
-                {/* 「高額で売却」の背面にだけゴールド帯（文字幅より左右に広く・少し背高・帯として認識できる濃さ／角丸なし・文字色は不変） */}
-                <span style={{ position: "relative", display: "inline-block" }}>
-                  <span
-                    aria-hidden
-                    style={{
-                      position: "absolute",
-                      left: "-26px",
-                      right: "-26px",
-                      top: "2px",
-                      bottom: "2px",
-                      background: "rgba(201,168,76,0.24)",
-                      zIndex: 0,
-                    }}
-                  />
-                  <span style={{ position: "relative", zIndex: 1 }}>
-                    <span className="hero-main-gold">高額</span>
-                    <span className="hero-main-de">で</span>
-                    <span className="hero-main-gold">売却</span>
-                  </span>
-                </span>
+                <span className="hero-main-gold">高額</span>
+                <span className="hero-main-de">で</span>
+                <span className="hero-main-gold">売却</span>
               </p>
               <p className="hero-heading-close">しませんか？</p>
 
@@ -309,9 +292,9 @@ export function Hero() {
                 >
                   <defs>
                     <linearGradient id="heroBrush" x1="0" y1="1" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#9a7a3a" />
-                      <stop offset="45%" stopColor="#9a7a3a" />
-                      <stop offset="100%" stopColor="#9a7a3a" />
+                      <stop offset="0%" stopColor="#E5C04A" />
+                      <stop offset="45%" stopColor="#E5C04A" />
+                      <stop offset="100%" stopColor="#E5C04A" />
                     </linearGradient>
                   </defs>
                   {/* 筆の本体：太さ不均一・両端テーパー・右肩上がり */}
@@ -339,7 +322,7 @@ export function Hero() {
                   {/* 末尾のドライブラシ（かすれの飛び） */}
                   <path
                     d="M318 19 l 16 -2 M348 16 l 20 -3 M384 11 l 18 -3"
-                    stroke="#9a7a3a"
+                    stroke="#E5C04A"
                     strokeWidth="3"
                     strokeLinecap="round"
                     opacity="0.85"

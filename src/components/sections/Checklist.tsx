@@ -51,7 +51,7 @@ export function Checklist() {
         {/* ===== CTAセクション（チェックリスト下・余白48px・同幅 max-680・中央揃え） ===== */}
         <div className="relative mx-auto mt-12 w-full max-w-[720px] overflow-hidden rounded-lg border-2 border-[#D4AF37] bg-[#FFF8EE] px-5 py-8 md:p-8">
           {/* ⑤ 右上：金のタグ（角に収める・PCのみ） */}
-          <div className="absolute right-5 top-5 z-10 hidden whitespace-nowrap rounded-lg bg-[#9a7a3a] px-4 py-2.5 text-center text-[13px] font-extrabold leading-snug text-white md:block">
+          <div className="absolute right-5 top-5 z-10 hidden whitespace-nowrap rounded-lg bg-[#D4AF37] px-4 py-2.5 text-center text-[13px] font-extrabold leading-snug text-white md:block">
             まずは価値を
             <br />
             確認してみませんか？
@@ -72,7 +72,7 @@ export function Checklist() {
             {/* ④ メイン見出し（左上に光線3本＋手書き金下線） */}
             <div className="relative inline-flex items-end justify-center gap-1 pt-1">
               <svg
-                className="pointer-events-none absolute -left-1 -top-5 h-8 w-8 text-[#9a7a3a] md:-left-2 md:-top-7 md:h-11 md:w-11"
+                className="pointer-events-none absolute -left-1 -top-5 h-8 w-8 text-[#D4AF37] md:-left-2 md:-top-7 md:h-11 md:w-11"
                 viewBox="0 0 48 48"
                 fill="none"
                 stroke="currentColor"
@@ -95,7 +95,7 @@ export function Checklist() {
                 >
                   <path
                     d="M6 9 C 70 3, 150 12, 230 6 C 270 3, 300 7, 314 8"
-                    stroke="#9a7a3a"
+                    stroke="#D4AF37"
                     strokeWidth="8"
                     strokeLinecap="round"
                   />
@@ -123,7 +123,7 @@ export function Checklist() {
               </a>
               <a
                 href="#contact"
-                className="flex flex-1 items-center justify-center gap-1.5 bg-[#9a7a3a] py-4 text-[15px] font-extrabold text-white transition-[filter] hover:brightness-95 md:gap-2 md:text-lg"
+                className="flex flex-1 items-center justify-center gap-1.5 bg-[#D4AF37] py-4 text-[15px] font-extrabold text-white transition-[filter] hover:brightness-95 md:gap-2 md:text-lg"
               >
                 <Headset className="h-[18px] w-[18px] md:h-5 md:w-5" strokeWidth={2} />
                 まずはお気軽にご相談ください
