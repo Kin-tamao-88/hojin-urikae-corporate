@@ -170,7 +170,7 @@ export default function Hero() {
             <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
-              事業・信用・資産価値まで<br />総合的に査定
+              <span style={{ color: '#e53935', fontWeight: 700 }}>赤字決算・借入・税金未払いなど</span><br />様々な課題に対応可能
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function Hero() {
             <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
-              市場価値をもとに<br />売却可能価格をご提示
+              独自の評価基準で売却可能価格を<br /><span style={{ color: '#e53935', fontWeight: 700 }}>24時間以内にご提示</span>
             </p>
           </div>
 
@@ -196,20 +196,11 @@ export default function Hero() {
             <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
-              独自ネットワークから<br />買い手をご提案
+              業界トップクラスのネットワークで<br /><span style={{ color: '#e53935', fontWeight: 700 }}>売却希望のご成約率96%</span>
             </p>
           </div>
         </div>
 
-        <p style={{
-          fontSize: '12px',
-          color: '#9ca3af',
-          textAlign: 'center',
-          padding: '12px 0',
-          margin: 0,
-        }}>
-          ※法令・定款・契約内容等により、買取できない場合があります。
-        </p>
       </section>
     </>
   )
