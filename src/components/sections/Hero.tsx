@@ -1,6 +1,7 @@
 import { Mail, ChevronRight } from 'lucide-react'
 import heroConsultation from '../../assets/hero/hero-consultation.png'
 import jcaoLogo from '../../assets/hero/jcao-logo-top.png'
+import jcaoIcon from '../../assets/hero/jcao-icon-trimmed.png'
 
 const NAVY = '#1a2744'
 const ORANGE = '#e8550a'
@@ -18,19 +19,23 @@ export default function Hero() {
         padding: '10px 32px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src={jcaoLogo} alt="日本法人査定機構" style={{ height: '97px', width: 'auto', marginLeft: '102px' }} />
+          <img src={jcaoLogo} alt="日本法人査定機構" style={{ height: '80px', width: 'auto', marginLeft: '102px' }} />
         </div>
         <a href="#contact" style={{
           display: 'flex', alignItems: 'center', gap: '12px',
           backgroundColor: ORANGE, color: '#ffffff',
-          padding: '12px 20px', textDecoration: 'none',
-        }}>
+          padding: '16px 26px', textDecoration: 'none',
+          transition: 'background-color 0.2s ease',
+        }}
+          onMouseOver={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#c94208')}
+          onMouseOut={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = ORANGE)}
+        >
           <Mail style={{ width: '16px', height: '16px', flexShrink: 0 }} />
           <div style={{ textAlign: 'left' }}>
             <div style={{ fontWeight: 800, fontSize: '1.2rem', lineHeight: 1.3 }}>法人価値を無料で診断する</div>
             <div style={{ fontSize: '0.68rem', opacity: 0.9, lineHeight: 1.3 }}>24時間受付中</div>
           </div>
-          <ChevronRight style={{ width: '16px', height: '16px', flexShrink: 0 }} />
+          <ChevronRight style={{ width: '16px', height: '16px', flexShrink: 0 }} strokeWidth={2.5} />
         </a>
       </header>
 
@@ -78,55 +83,67 @@ export default function Hero() {
           position: 'relative',
           zIndex: 10,
           maxWidth: '1280px',
-          margin: '0 auto',
-          padding: '0 64px',
+          margin: '0 ',
+          padding: '0 146px',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
         }}>
-          <div style={{ width: '45%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
 
-            {/* 1行目 */}
-            <p style={{ fontSize: '35px', color: NAVY, fontWeight: 500, margin: '0 0 8px 0', lineHeight: 1.1 }}>
-              不要な法人が
-            </p>
+            {/* テキストブロック左横のシンボルロゴ */}
+            <img
+              src={jcaoIcon}
+              alt="日本法人査定機構"
+              style={{ height: '175px', width: 'auto', flexShrink: 0, opacity: 0.80 }}
+            />
 
-            {/* 2行目 */}
-            <h1 style={{
-              fontSize: '60px',
-              color: ORANGE,
-              fontWeight: 900,
-              lineHeight: 1.1,
-              margin: 0,
-              whiteSpace: 'nowrap',
-            }}>
-              高額資金に変わる
-            </h1>
+            {/* テキストブロック */}
+            <div>
 
-            {/* 2行目下 直線アンダーライン */}
-            <div style={{
-              height: '3px',
-              background: ORANGE,
-              width: '70%',
-              marginTop: '6px',
-              marginBottom: '20px',
-            }} />
+              {/* 1行目 */}
+              <p style={{ fontSize: '38px', color: NAVY, fontWeight: 800, margin: '0 0 15px 0', lineHeight: 1.1, letterSpacing: '-0.01em' }}>
+                不要な法人が
+              </p>
 
-            {/* 3行目 */}
-            <p style={{ fontSize: '30px', color: '#1a2744', fontWeight: 500, marginBottom: '20px' }}>
-              <span style={{ background: 'linear-gradient(transparent 60%, #FFE066 60%)' }}>
-                法人査定は<span style={{ position: 'relative', display: 'inline-block' }}>JCAO</span>にご相談ください。
-              </span>
-            </p>
+              {/* 2行目 */}
+              <h1 style={{
+                fontSize: '68px',
+                color: ORANGE,
+                fontWeight: 900,
+                lineHeight: 1.0,
+                margin: 0,
+                whiteSpace: 'nowrap',
+                letterSpacing: '-0.02em',
+              }}>
+                高額資金に変わる
+              </h1>
 
-            {/* 5〜6行目 */}
-            <p style={{ fontSize: '21px', color: '#374151', margin: '0 0 4px 0' }}>
-              休眠法人・赤字法人・債務超過法人にも
-            </p>
-            <p style={{ fontSize: '21px', color: '#374151', margin: 0 }}>
-              価値が残っている可能性があります。
-            </p>
+              {/* 2行目下 直線アンダーライン */}
+              <div style={{
+                height: '3px',
+                background: ORANGE,
+                width: '70%',
+                marginTop: '6px',
+                marginBottom: '38px',
+              }} />
 
+              {/* 3行目 */}
+              <p style={{ fontSize: '32px', color: '#1a2744', fontWeight: 800, marginBottom: '20px' }}>
+                <span style={{ background: 'linear-gradient(transparent 56%, rgba(255,218,60,0.55) 66%)', padding: '0 3px' }}>
+                  法人査定は<span style={{ position: 'relative', display: 'inline-block' }}>JCAO</span>にご相談ください。
+                </span>
+              </p>
+
+              {/* 5〜6行目 */}
+              <p style={{ fontSize: '16px', color: '#374151', margin: '0 0 4px 0', fontWeight: 700 }}>
+                休眠法人・赤字法人・債務超過法人にも
+              </p>
+              <p style={{ fontSize: '16px', color: '#374151', margin: 0, fontWeight: 700 }}>
+                価値が残っている可能性があります。
+              </p>
+
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +151,7 @@ export default function Hero() {
       {/* ===== 3カラム特徴エリア ===== */}
       <section style={{
         backgroundColor: '#ffffff',
-        borderTop: '1px solid #e5e7eb',
+        borderTop: '1px solid #D1D5DB',
         padding: '40px 0',
       }}>
         <div style={{
@@ -145,53 +162,41 @@ export default function Hero() {
         }}>
 
           {/* 01 */}
-          <div style={{ borderRight: '1px solid #e5e7eb', padding: '0 48px' }}>
-            <div style={{
-              width: '36px', height: '36px', borderRadius: '50%',
-              backgroundColor: ORANGE, color: '#ffffff',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontWeight: 700, fontSize: '14px',
-              marginBottom: '16px',
-            }}>01</div>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: NAVY, margin: '0 0 12px 0' }}>
-              価値が残る可能性
+          <div style={{ borderRight: '1px solid #D1D5DB', padding: '0 48px' }}>
+            <p style={{ fontSize: '40px', fontWeight: 900, color: ORANGE, lineHeight: 1, margin: '0 0 6px 0', letterSpacing: '-0.02em' }}>01</p>
+            <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
+              法人価値を診断
             </h3>
-            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.7, margin: 0 }}>
-              解散前に査定することで、思わぬ価値が見つかる場合があります。
+            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
+            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
+              事業・信用・資産価値まで<br />総合的に査定
             </p>
           </div>
 
           {/* 02 */}
-          <div style={{ borderRight: '1px solid #e5e7eb', padding: '0 48px' }}>
-            <div style={{
-              width: '36px', height: '36px', borderRadius: '50%',
-              backgroundColor: ORANGE, color: '#ffffff',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontWeight: 700, fontSize: '14px',
-              marginBottom: '16px',
-            }}>02</div>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: NAVY, margin: '0 0 12px 0' }}>
-              最短即日査定
+          <div style={{ borderRight: '1px solid #D1D5DB', padding: '0 48px' }}>
+            <p style={{ fontSize: '40px', fontWeight: 900, color: ORANGE, lineHeight: 1, margin: '0 0 6px 0', letterSpacing: '-0.02em' }}>02</p>
+            <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
+              適正価格を算出
             </h3>
-            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.7, margin: 0 }}>
-              売却可能性をスピーディーに確認できます。
+            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
+            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
+              市場価値をもとに<br />売却可能価格をご提示
             </p>
           </div>
 
           {/* 03 */}
           <div style={{ padding: '0 48px' }}>
-            <div style={{
-              width: '36px', height: '36px', borderRadius: '50%',
-              backgroundColor: ORANGE, color: '#ffffff',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontWeight: 700, fontSize: '14px',
-              marginBottom: '16px',
-            }}>03</div>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: NAVY, margin: '0 0 12px 0' }}>
-              来店不要で完結
+            <p style={{ fontSize: '40px', fontWeight: 900, color: ORANGE, lineHeight: 1, margin: '0 0 6px 0', letterSpacing: '-0.02em' }}>03</p>
+            <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
+              最適な売却先をご紹介
             </h3>
-            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.7, margin: 0 }}>
-              全国どこからでもオンラインで手続きが可能です。
+            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
+            <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
+              独自ネットワークから<br />買い手をご提案
             </p>
           </div>
         </div>

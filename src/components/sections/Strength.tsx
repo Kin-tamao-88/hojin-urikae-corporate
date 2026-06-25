@@ -1,6 +1,5 @@
-import { Building2, Timer, Shield, CheckCircle, FileText } from 'lucide-react';
+import { CheckCircle, FileText } from 'lucide-react';
 import syoudanImg from '../../assets/people/syoudan-lp2.png';
-import personIt from '../../assets/people/person-it.png';
 import jcaoIcon from '../../assets/hero/jcao-icon-trimmed.png';
 import iconStrength01 from '../../assets/strength/icon-strength-01.png';
 import iconStrength02 from '../../assets/strength/icon-strength-02.png';
@@ -25,7 +24,7 @@ const reasons = [
   {
     num: '03',
    icon: <img src={iconStrength03} alt="" style={{ width: '84px', height: '64px', objectFit: 'contain' }} />,
-    title: 'コンプライアンスの徹底',
+    title: 'コンプライアンス徹底',
     desc: '企業情報や取引内容は厳重に管理し、\n後々のトラブル、情報流出防止を徹底。',
   },
 ];
@@ -67,40 +66,20 @@ export function Strength() {
               background: '#ffffff',
               border: `1px solid rgba(26,39,68,0.12)`,
               padding: '28px 24px 32px',
-              position: 'relative',
             }}>
-              <span style={{
-                position: 'absolute',
-                top: 20,
-                left: 20,
-                background: ORANGE,
-                color: '#ffffff',
-                fontWeight: 900,
-                fontSize: '0.75rem',
-                borderRadius: '50%',
-                width: 36,
-                height: 36,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                letterSpacing: '0.02em',
-              }}>
-                {r.num}
-              </span>
-              <div style={{ marginTop: 36, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 16, marginTop: 8 }}>
+                <p style={{
+                  fontWeight: 800,
+                  fontSize: '1.15rem',
+                  color: NAVY,
+                  margin: 0,
+                  lineHeight: 1.4,
+                }}>
+                  {r.title}
+                </p>
                 {r.icon}
-                <div>
-                  <p style={{
-                    fontWeight: 800,
-                    fontSize: '1.1rem',
-                    color: NAVY,
-                    marginBottom: 6,
-                  }}>
-                    {r.title}
-                  </p>
-                  <div style={{ width: 32, height: 2, background: ORANGE }} />
-                </div>
               </div>
+              <div style={{ width: 112, height: 2, background: ORANGE, marginBottom: 16 }} />
               <p style={{
                 fontWeight: 400,
                 fontSize: '0.9rem',
