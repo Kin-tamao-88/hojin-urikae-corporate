@@ -167,7 +167,7 @@ export default function Hero() {
             <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
               法人価値を診断
             </h3>
-            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
               事業・信用・資産価値まで<br />総合的に査定
@@ -180,7 +180,7 @@ export default function Hero() {
             <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
               適正価格を算出
             </h3>
-            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
               市場価値をもとに<br />売却可能価格をご提示
@@ -193,7 +193,7 @@ export default function Hero() {
             <h3 style={{ fontSize: '21px', fontWeight: 800, color: NAVY, margin: '0 0 6px 0', letterSpacing: '-0.01em' }}>
               最適な売却先をご紹介
             </h3>
-            <div style={{ width: '24px', height: '2px', background: ORANGE, marginBottom: 12 }} />
+            <div style={{ width: '48px', height: '2px', background: ORANGE, marginBottom: 12 }} />
             <div style={{ width: '87%', height: 1, background: '#CBD5E1', marginBottom: 14 }} />
             <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
               独自ネットワークから<br />買い手をご提案

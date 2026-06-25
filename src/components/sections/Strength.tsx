@@ -81,7 +81,7 @@ export function Strength() {
               </div>
               <div style={{ width: 112, height: 2, background: ORANGE, marginBottom: 16 }} />
               <p style={{
-                fontWeight: 400,
+                fontWeight: 500,
                 fontSize: '0.9rem',
                 color: '#444',
                 lineHeight: 1.8,

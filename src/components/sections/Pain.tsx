@@ -15,7 +15,7 @@ const topItems = [
   {
     icon: iconGraphDown,
     title: "赤字法人",
-    desc: "業績が赤字の状態でも、事業価値を適切に評価し、売却できる可能性が高いです。",
+    desc: "JCAO独自の評価基準で査定しますので、\nまったく問題ないことが多いです。",
     iconSize: 62,
     titleSize: "2.6rem",
   },
@@ -40,17 +40,17 @@ const bottomItems = [
   {
     icon: iconTax,
     title: "税金滞納",
-    desc: "税金の滞納がある場合でも、専門家と連携し、適切な解決策をご提案します。",
+    desc: "滞納がある場合でもご相談ください。売却可能なプランをご提案します。",
   },
   {
     icon: iconElderly,
     title: "代表者高齢",
-    desc: "代表者の高齢化により事業承継にお悩みの法人も、スムーズな売却をサポートします。",
+    desc: "事業承継にお悩みの法人も、\nスムーズな売却をサポートします。",
   },
   {
     icon: iconSuccessor,
     title: "後継者不在",
-    desc: "後継者がいない法人でも、従業員や取引先の雇用・取引を守りながら売却が可能です。",
+    desc: "従業員や取引先の雇用・取引を\n守りながら売却が可能です。",
   },
 ]
 
@@ -99,7 +99,7 @@ export function Pain() {
                   {item.title}
                 </h3>
               </div>
-              <p style={{ fontSize: "0.88rem", color: "#555", lineHeight: 1.8, margin: 0, whiteSpace: "pre-line" }}>
+              <p style={{ fontSize: "0.88rem", color: "#444", lineHeight: 1.8, margin: 0, whiteSpace: "pre-line", fontWeight: 500 }}>
                 {item.desc}
               </p>
             </div>
@@ -107,12 +107,12 @@ export function Pain() {
         </div>
 
         {/* 下段：標準3枚 */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "40px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px", marginBottom: "40px" }}>
           {bottomItems.map((item) => (
             <div key={item.title} style={{
               background: "#ffffff",
               border: "1px solid rgba(232,85,10,0.1)",
-              padding: "24px",
+              padding: "24px 16px",
               display: "flex", gap: "16px", alignItems: "flex-start",
             }}>
               <img src={item.icon} alt={item.title} style={{ width: "72px", height: "72px", objectFit: "contain", mixBlendMode: "multiply" as const, flexShrink: 0 }} />
@@ -120,7 +120,7 @@ export function Pain() {
                 <h3 style={{ fontSize: "1.1rem", fontWeight: 900, color: NAVY, margin: "0 0 8px" }}>
                   {item.title}
                 </h3>
-                <p style={{ fontSize: "0.85rem", color: "#555", lineHeight: 1.8, margin: 0 }}>
+                <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: 1.8, margin: 0, fontWeight: 500,whiteSpace: "pre-line" }}>
                   {item.desc}
                 </p>
               </div>
