@@ -18,7 +18,7 @@ export default function Hero() {
         padding: '10px 32px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src={jcaoLogo} alt="日本法人査定機構" style={{ height: '74px', width: 'auto', marginLeft: '16px' }} />
+          <img src={jcaoLogo} alt="日本法人査定機構" style={{ height: '97px', width: 'auto', marginLeft: '102px' }} />
         </div>
         <a href="#contact" style={{
           display: 'flex', alignItems: 'center', gap: '12px',
@@ -27,7 +27,7 @@ export default function Hero() {
         }}>
           <Mail style={{ width: '16px', height: '16px', flexShrink: 0 }} />
           <div style={{ textAlign: 'left' }}>
-            <div style={{ fontWeight: 700, fontSize: '0.9rem', lineHeight: 1.3 }}>法人価値を無料で診断する</div>
+            <div style={{ fontWeight: 800, fontSize: '1.2rem', lineHeight: 1.3 }}>法人価値を無料で診断する</div>
             <div style={{ fontSize: '0.68rem', opacity: 0.9, lineHeight: 1.3 }}>24時間受付中</div>
           </div>
           <ChevronRight style={{ width: '16px', height: '16px', flexShrink: 0 }} />
