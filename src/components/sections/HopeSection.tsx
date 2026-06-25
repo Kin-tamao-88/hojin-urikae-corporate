@@ -21,7 +21,7 @@ export const HopeSection = () => {
           <img
             src={jcaoLogo}
             alt="JCAO"
-            style={{ height: '120px', display: 'block', margin: '0 auto 40px auto' }}
+            style={{ height: '150px', display: 'block', margin: '0 auto 40px auto' }}
           />
         </div>
 
@@ -65,6 +65,7 @@ export const HopeSection = () => {
 </p>
 <p style={{ color: '#222', fontSize: '1.1rem', lineHeight: 2.7, margin: 0 }}>
   あなたの法人に残っている価値を、必要としている人へ繋ぐ。<br />
+  <br />
   無駄なコストが掛からない、最適な提案で価値を生みだし<br />
   次のビジネスへの架け橋になることが私たちの使命です。
 </p>
