@@ -31,13 +31,13 @@ export function ServiceSection() {
 
       {/* ===== ブランド帯（VALUE → SERVICE 繋ぎ） ===== */}
       <div
+        className="py-[26px] px-5 md:py-[30px] md:px-5"
         style={{
           background: NAVY,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "30px 20px",
         }}
       >
         <p style={{ fontSize: "18px", fontWeight: 700, color: "#9a7a3a", letterSpacing: "0.1em", margin: "0 0 16px", textAlign: "center" }}>
@@ -57,7 +57,7 @@ export function ServiceSection() {
       </div>
 
       {/* 下部：事業内容リスト */}
-      <div className="relative max-w-5xl mx-auto px-6 py-14 md:py-20">
+      <div className="relative max-w-5xl mx-auto px-5 md:px-6 py-10 md:py-20">
 
         {/* 背景装飾：右下にうっすらビル群（PC専用） */}
         <div
@@ -87,14 +87,14 @@ export function ServiceSection() {
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 py-8"
+                className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 py-6 md:py-8"
                 style={{ borderTop: i === 0 ? "1px solid #e5e7eb" : "1px solid #e5e7eb" }}
               >
                 {/* アイコン＋タイトル */}
                 <div className="flex items-center gap-5 md:w-72 flex-shrink-0">
                   <img src={s.icon} alt={s.title} className="w-14 h-14 md:w-16 md:h-16 object-contain flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg md:text-xl font-bold" style={{ color: NAVY }}>
+                    <h3 className="text-[15px] md:text-xl font-bold" style={{ color: NAVY }}>
                       {s.title}
                     </h3>
                     <div className="w-6 h-[2px] mt-2" style={{ background: ORANGE }} />
@@ -105,7 +105,7 @@ export function ServiceSection() {
                 <div className="hidden md:block w-px self-stretch" style={{ background: "#e5e7eb" }} />
 
                 {/* 本文 */}
-                <p className="text-sm md:text-base leading-relaxed whitespace-pre-line" style={{ color: "#2b3445" }}>
+                <p className="text-[14px] md:text-base leading-[1.8] md:leading-relaxed whitespace-pre-line" style={{ color: "#2b3445" }}>
                   {s.body}
                 </p>
               </div>

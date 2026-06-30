@@ -29,17 +29,17 @@ export function ContactSection() {
   }
 
   return (
-    <section id="お問い合わせ" className="py-16 md:py-24 text-white" style={{ background: NAVY }}>
+    <section id="お問い合わせ" className="py-12 md:py-24 text-white" style={{ background: NAVY }}>
       <div className="max-w-3xl mx-auto px-6">
 
         <div className="text-center">
           <p className="text-xs font-bold tracking-widest mb-2 opacity-70">CONTACT</p>
-          <h2 className="text-2xl md:text-4xl font-black mb-8 leading-snug">
+          <h2 className="text-2xl md:text-4xl font-black mb-6 md:mb-8 leading-snug">
             まずはお気軽に<br />
             ご相談ください
           </h2>
 
-          <p className="text-sm leading-relaxed mb-12 opacity-80">
+          <p className="text-sm leading-relaxed mb-8 md:mb-12 opacity-80">
             法人の状況は一社ごとに異なります。<br />
             現在の状況を確認したうえで、<br />
             最適なご提案をいたします。<br />
@@ -47,7 +47,7 @@ export function ContactSection() {
           </p>
 
           {/* 3STEP */}
-          <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mb-14">
+          <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mb-10 md:mb-14">
             {steps.map((s) => (
               <div key={s.no} className="flex-1 flex flex-col items-center">
                 <span className="text-sm font-black tracking-widest mb-2" style={{ color: ORANGE }}>
@@ -148,23 +148,6 @@ export function ContactSection() {
           </button>
         </form>
 
-        {/* 電話・メール */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-14">
-          <div>
-            <p className="text-xs opacity-60 mb-1 text-center">お電話でのご相談</p>
-            <a href="tel:0120-000-000" className="text-3xl font-black tracking-wide" style={{ color: "#f0c040" }}>
-              0120-000-000
-            </a>
-            <p className="text-xs opacity-50 mt-1 text-center">受付時間 9:00〜18:00（土日祝除く）</p>
-          </div>
-          <div className="hidden md:block w-px h-16 opacity-20 bg-white" />
-          <div className="text-center">
-            <p className="text-xs opacity-60 mb-1">メールでのご相談</p>
-            <a href="mailto:info@jcao.jp" className="text-base font-bold underline opacity-80">
-              info@jcao.jp（仮）
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   )
