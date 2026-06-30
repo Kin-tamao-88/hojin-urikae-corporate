@@ -1,5 +1,5 @@
+import { Hero } from "./components/sections/Hero"
 import jcaoLogo from "./assets/hero/jcao-logo-top.png"
-import heroImg from "./assets/hero/hero-consultation.png"
 import iconService1 from "./assets/strength/icon-strength-01.png"
 import iconService2 from "./assets/strength/icon-strength-02.png"
 import iconService3 from "./assets/strength/icon-strength-03.png"
@@ -39,67 +39,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col" style={{ fontFamily: "'Noto Sans JP', sans-serif", color: "#1a1a1a" }}>
 
-      {/* ===== HEADER ===== */}
-      <header className="sticky top-0 z-50 bg-white border-b" style={{ borderColor: "#e5e7eb" }}>
-        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
-          <img src={jcaoLogo} alt="日本法人査定機構 JCAO" className="h-10 md:h-14 w-auto" />
-          <nav className="hidden md:flex items-center gap-8">
-            {["事業内容", "会社概要", "お問い合わせ"].map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="text-sm font-medium hover:opacity-70 transition-opacity"
-                style={{ color: NAVY }}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="#お問い合わせ"
-            className="text-sm font-bold text-white px-5 py-2.5 rounded"
-            style={{ background: ORANGE }}
-          >
-            お問い合わせ
-          </a>
-        </div>
-      </header>
-
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden" style={{ background: "#f0f4f8" }}>
-        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
-
-          {/* テキスト */}
-          <div className="flex-1">
-            <p className="text-sm font-bold tracking-widest mb-3" style={{ color: ORANGE }}>
-              Japan Corporate Assessment Organization
-            </p>
-            <h1 className="text-3xl md:text-5xl font-black leading-tight mb-5" style={{ color: NAVY }}>
-              法人の価値を、<br />正しく評価する。
-            </h1>
-            <p className="text-base md:text-lg leading-relaxed mb-8" style={{ color: "#374151" }}>
-              日本法人査定機構（JCAO）は、休眠・赤字・債務超過法人を対象とした法人査定・売却支援の専門機関です。解散をご検討の前に、まずは無料査定をご利用ください。
-            </p>
-            <a
-              href="#お問い合わせ"
-              className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded text-base"
-              style={{ background: ORANGE }}
-            >
-              無料査定のお問い合わせ
-            </a>
-          </div>
-
-          {/* 画像 */}
-          <div className="flex-1 w-full">
-            <img
-              src={heroImg}
-              alt="法人査定の相談シーン"
-              className="w-full rounded-lg object-cover"
-              style={{ maxHeight: "360px", objectPosition: "center" }}
-            />
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* ===== 事業内容 ===== */}
       <section id="事業内容" className="py-16 md:py-24 bg-white">
